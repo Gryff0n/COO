@@ -4,15 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Clone {
-    private int numero;
-    private String nom;
-    private String espece;
-    private int stockEnergie;
-    private int stockOxygene;
-    private final static int MAXENERGIE = 100;
-    private final static int MAXOXYGENE = 200;
+    private final int numero;
+    private final String nom;
+    private final String espece;
+    protected int stockEnergie;
+    protected int stockOxygene;
+    protected final static int MAXENERGIE = 100;
+    protected final static int MAXOXYGENE = 200;
 
-    private static Map<String, Integer> lesNumerosSuivants = new HashMap<>();
+    private static final Map<String, Integer> lesNumerosSuivants = new HashMap<>();
 
     public Clone(String espece) {
         this.espece = espece;
