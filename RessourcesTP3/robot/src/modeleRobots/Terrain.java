@@ -1,7 +1,7 @@
 package modeleRobots;
 
 public class Terrain {
-    private float fin;
+    private final float fin;
 
     public Terrain(float fin) {
         this.fin = fin;

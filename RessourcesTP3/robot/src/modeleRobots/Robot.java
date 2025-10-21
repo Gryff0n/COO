@@ -1,7 +1,7 @@
 package modeleRobots;
 
 
-public class Robot {
+public abstract class Robot {
     protected String nom;
     private float position;
     protected int vitesse;
@@ -16,8 +16,13 @@ public class Robot {
     public Robot(String nom, int vitesse) {
         this.nom = nom;
         this.vitesse = vitesse;
+        this.position=0f;
         this.modeDeplacement =new Marcher();
     }
+
+
+    abstract public void deplacement(Terrain t);
+
 
     public String getNom() {
         return nom;
@@ -37,6 +42,10 @@ public class Robot {
 
     public void setModeDeplacement(IModeDeplacement modeDeplacement) {
         this.modeDeplacement = modeDeplacement;
+    }
+
+    public IModeDeplacement getModeDeplacement() {
+        return modeDeplacement;
     }
 
 
